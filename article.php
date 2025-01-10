@@ -1,7 +1,7 @@
 <div class="container">
     <!-- Button trigger modal -->
-<button type="button" class="btn btn-secondary mb-2" data-bs-toggle="modal" data-bs-target="#modalTambah">
-    <i class="bi bi-plus-lg"></i> Tambah Article
+<button type="button" class="btn btn-success mb-2" data-bs-toggle="modal" data-bs-target="#modalTambah">
+    <i class="bi bi-plus-lg"></i> Add Article
 </button>
 
 <!-- Modal -->
@@ -19,7 +19,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-success">Save changes</button>
       </div>
     </div>
   </div>
@@ -106,8 +106,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" value="simpan" name="simpan" class="btn btn-primary">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" value="simpan" name="simpan" class="btn btn-success">
                 </div>
             </form>
         </div>
@@ -132,8 +132,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">batal</button>
-                    <input type="submit" value="hapus" name="hapus" class="btn btn-primary">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">batal</button>
+                    <input type="submit" value="hapus" name="hapus" class="btn btn-success">
                 </div>
             </form>
         </div>
@@ -172,8 +172,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <input type="submit" value="simpan" name="simpan" class="btn btn-primary">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                    <input type="submit" value="simpan" name="simpan" class="btn btn-success">
                 </div>
             </form>
         </div>

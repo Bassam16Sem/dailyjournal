@@ -85,22 +85,22 @@ include "koneksi.php";
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#home">Home</a>
+            <a class="nav-link" href="#home"style="color: black;">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#article">Article</a>
+            <a class="nav-link" href="#article"style="color: black;">Article</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#gallery">Gallery</a>
+            <a class="nav-link" href="#gallery"style="color: black;">Gallery</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#jadwal">Jadwal</a>
+            <a class="nav-link" href="#jadwal"style="color: black;">Jadwal</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#profile">Profile</a>
+            <a class="nav-link" href="#profile"style="color: black;">Profile</a>
           </li>
           <li class="nav-item">
-    <a class="nav-link" href="login.php">Logout</a>
+    <a class="nav-link" href="login.php"style="color: black;">Logout</a>
 </li>
         </ul>
       </div>
@@ -207,38 +207,36 @@ include "koneksi.php";
     </section>
     <!-- article end -->
 
-    <!-- Gallery Section Bang -->
+    <!-- Gallery Section -->
     <section id="gallery" class="text-section container">
     <h2 class="text-center mb-5">Gallery</h2>
-      <div class="row">
-        <div class="col-md-4">
-          <img
-            src="Gambar/japan2.jpg"
-            width="350"
-            height="150"
-            class="img-fluid mb-3"
-            alt="Gallery Image 1"
-          />
+    <div class="row">
+        <?php
+        $sql = "SELECT * FROM gallery ORDER BY tanggal DESC";
+        $hasil = $conn->query($sql); 
+
+        while($row = $hasil->fetch_assoc()){
+        ?>
+      <div class="col-sm-6 col-md-4 col-lg-3 mb-4"> <!-- Responsif dan ada spasi antar item -->
+      <div class="card h-80">
+                <img src="img/<?= $row["gambar"]?>" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title"><?= $row["judul"]?></h5>
+                    <p class="card-text">
+                    <?= $row["deskripsi"]?>
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-body-secondary">
+                        <?= $row["tanggal"]?>
+                    </small>
+                </div>
+            </div>
         </div>
-        <div class="col-md-4">
-          <img
-            src="Gambar/japan2.jpg"
-            width="350"
-            height="150"
-            class="img-fluid mb-3"
-            alt="Gallery Image 2"
-          />
-        </div>
-        <div class="col-md-4">
-          <img
-            src="Gambar/japan2.jpg"
-            width="350"
-            height="150"
-            class="img-fluid mb-3"
-            alt="Gallery Image 3"
-          />
-        </div>
-      </div>
+        <?php
+        }
+        ?>
+    </div>
 </section>
 
     <!-- Jadwal Section -->
@@ -286,7 +284,7 @@ include "koneksi.php";
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card schedule-card text-center">
+            <div class="card schedule-card text-center"style="min-height: 255px;">
                     <div class="card-body">
                         <i class="fas fa-calendar-day"></i>
                         <h5 class="card-title">Jumat</h5>
@@ -295,7 +293,7 @@ include "koneksi.php";
                 </div>
             </div>
             <div class="col-md-4 mb-4">
-                <div class="card schedule-card text-center">
+                <div class="card schedule-card text-center"style="min-height: 255px;">
                     <div class="card-body">
                         <i class="fas fa-calendar-day"></i>
                         <h5 class="card-title">Sabtu</h5>
@@ -311,15 +309,13 @@ include "koneksi.php";
   <h2 class="text-center mb-5">Profil Mahasiswa</h2>
   <div class="row align-items-center">
     <div class="col-md-4 text-center mb-4 mb-md-0">
-      <img
-        src="bassam.png"
-        height="100"
-        width="200"
-        alt="Foto Mahasiswa"
-        class="profile-photo img-fluid rounded rounded-circle"
-      />
+    <img
+    src="gambar/bassam.png"
+    alt="Foto Mahasiswa"
+    class="profile-photo img-fluid rounded-circle"
+    style="width: 170px; height: 170px;"
+    />  
     </div>
-
     <div class="col-md-8">
       <table class="table table-borderless">
         <tbody>

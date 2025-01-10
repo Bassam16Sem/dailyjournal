@@ -46,11 +46,17 @@ if (!isset($_SESSION['username'])) {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-dark">
             <li class="nav-item">
-                <a class="nav-link" href="admin.php?page=dashboard">Dashboard</a>
+                <a class="nav-link" href="admin.php?page=dashboard"style="color: black;">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="admin.php?page=article">Article</a>
-            </li> 
+                <a class="nav-link" href="admin.php?page=article"style="color: black;">Article</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=gallery"style="color: black;">Gallery</a>
+            </li>  
+            <li class="nav-item">
+                <a class="nav-link" href="admin.php?page=user"style="color: black;">Akun</a>
+            </li>  
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle text-danger fw-bold" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <?= $_SESSION['username']?>
@@ -65,10 +71,7 @@ if (!isset($_SESSION['username'])) {
     </nav>
     <!-- nav end -->
     <!-- content begin -->
-    <section id="content" class="p-5">
-        <div class="container"> 
-          <!-- content begin -->
-          <section id="content" class="p-5">
+    <section id="content" class="mb-5 p-5">
               <div class="container">
                   <?php
                   if(isset($_GET['page'])){
@@ -84,13 +87,10 @@ if (!isset($_SESSION['username'])) {
                   }
                   ?>
               </div>
-          </section>
-          <!-- content end -->
-        </div>
     </section>
     <!-- content end -->
     <!-- footer begin -->
-    <footer class="text-center p-5 bg-primary-subtle footer fixed-bottom">
+    <footer class="text-center p-4 bg-primary-subtle footer sticky-bottom">
     <div>
         <a href="https://www.instagram.com/udinusofficial"
         ><i class="bi bi-instagram h2 p-2 text-dark"></i
@@ -98,7 +98,7 @@ if (!isset($_SESSION['username'])) {
         <a href="https://twitter.com/udinusofficial"
         ><i class="bi bi-twitter h2 p-2 text-dark"></i
         ></a>
-        <a href="https://wa.me/+62812685577"
+        <a href="https://wa.me/+6285284161308"
         ><i class="bi bi-whatsapp h2 p-2 text-dark"></i
         ></a>
     </div>
@@ -111,4 +111,4 @@ if (!isset($_SESSION['username'])) {
     crossorigin="anonymous"
     ></script>
 </body>
-</html> 
+</html>

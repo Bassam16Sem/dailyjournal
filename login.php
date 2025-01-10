@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = md5($_POST['password']); // Mengenkripsi password dengan MD5
 
     // Prepared statement
-    $stmt = $conn->prepare("SELECT username, role FROM user WHERE username = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT username, role FROM users WHERE username = ? AND password = ?");
     $stmt->bind_param("ss", $username, $password);
 
     // Eksekusi query
